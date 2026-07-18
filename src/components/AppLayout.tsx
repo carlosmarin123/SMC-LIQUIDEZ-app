@@ -71,13 +71,13 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
   };
 
   return (
-    <div className="min-h-screen py-4 md:py-6 px-3 md:px-4 flex items-center justify-center bg-[#0d0f14] font-sans relative overflow-hidden">
+    <div className="fixed inset-0 flex items-center justify-center bg-[#0d0f14] font-sans overflow-hidden p-3 md:p-6">
       {/* Immersive background glow effects */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Mock Smartphone Container */}
-      <div className="w-[94%] max-w-[395px] h-[92vh] max-h-[820px] bg-[#131722]/95 border-[8px] md:border-[10px] border-[#2c303d] rounded-[36px] md:rounded-[48px] shadow-2xl relative flex flex-col overflow-hidden text-slate-300 select-none">
+      <div className="w-full max-w-[395px] h-full md:h-[820px] md:max-h-[820px] bg-[#131722]/95 border-[8px] md:border-[10px] border-[#2c303d] rounded-[36px] md:rounded-[48px] shadow-2xl relative flex flex-col overflow-hidden text-slate-300 select-none">
         {/* Notch / Speaker bar of mobile */}
         <div className="flex absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#2c303d] rounded-b-2xl z-40 items-center justify-center">
           <div className="w-12 h-1.5 bg-slate-950 rounded-full mb-1" />
