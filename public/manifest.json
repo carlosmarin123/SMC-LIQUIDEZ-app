@@ -1,0 +1,27 @@
+{
+  "short_name": "SMC Liquidez",
+  "name": "SMC Liquidez - Active Recall",
+  "description": "Aplicación de estudio de Smart Money Concepts y Liquidez",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0d0f14",
+  "theme_color": "#131722",
+  "display": "standalone",
+  "orientation": "portrait"
+}

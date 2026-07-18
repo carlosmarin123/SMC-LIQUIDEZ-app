@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </radialGradient>
+    
+    <!-- Golden Metallic Gradient for Candlesticks & Letters -->
+    <linearGradient id="goldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9a3412" />
+      <stop offset="30%" stop-color="#ea580c" />
+      <stop offset="70%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#fef08a" />
+    </linearGradient>
+
+    <!-- Subtle Outer Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Smooth Rounded App Border (Mimics Phone Launcher Icon shape) -->
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="4" />
+
+  <!-- Technical grid patterns in the background (very faint) -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="64" y1="0" x2="64" y2="512" />
+    <line x1="128" y1="0" x2="128" y2="512" />
+    <line x1="192" y1="0" x2="192" y2="512" />
+    <line x1="256" y1="0" x2="256" y2="512" />
+    <line x1="320" y1="0" x2="320" y2="512" />
+    <line x1="384" y1="0" x2="384" y2="512" />
+    <line x1="448" y1="0" x2="448" y2="512" />
+    <line x1="0" y1="64" x2="512" y2="64" />
+    <line x1="0" y1="128" x2="512" y2="128" />
+    <line x1="0" y1="192" x2="512" y2="192" />
+    <line x1="0" y1="256" x2="512" y2="256" />
+    <line x1="0" y1="320" x2="512" y2="320" />
+    <line x1="0" y1="384" x2="512" y2="384" />
+    <line x1="0" y1="448" x2="512" y2="448" />
+  </g>
+
+  <!-- Main Styled Candlestick Logo representing Gold & Liquidez (forming an S-curve structure) -->
+  <g filter="url(#glow)">
+    <!-- Candlestick 1 (Left - Bearish) -->
+    <line x1="160" y1="160" x2="160" y2="340" stroke="url(#goldGrad)" stroke-width="3" opacity="0.5" />
+    <rect x="144" y="200" width="32" height="100" rx="6" fill="url(#goldGrad)" />
+
+    <!-- Candlestick 2 (Center - Inducement Swept / Lower) -->
+    <line x1="256" y1="220" x2="256" y2="420" stroke="url(#goldGrad)" stroke-width="4" />
+    <rect x="236" y="280" width="40" height="90" rx="8" fill="url(#goldGrad)" />
+    <!-- Mini Liquidity Sweep Indicator star at the bottom of central wick -->
+    <circle cx="256" cy="420" r="8" fill="#eab308" />
+
+    <!-- Candlestick 3 (Right - Massive Strong Breakout / BOS) -->
+    <line x1="352" y1="100" x2="352" y2="280" stroke="url(#goldGrad)" stroke-width="3" opacity="0.8" />
+    <rect x="336" y="120" width="32" height="120" rx="6" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Glowing Trendline connecting them -->
+  <path d="M 160 250 Q 256 390 352 180" fill="none" stroke="#fef08a" stroke-width="6" stroke-linecap="round" filter="url(#glow)" opacity="0.9" />
+
+  <!-- Decorative text label for the Launcher Icon -->
+  <text x="256" y="475" font-family="'Inter', sans-serif" font-weight="900" font-size="28" fill="#eab308" letter-spacing="8" text-anchor="middle" opacity="0.95">SMC</text>
+</svg>

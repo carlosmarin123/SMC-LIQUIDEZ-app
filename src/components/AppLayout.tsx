@@ -271,11 +271,25 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
                   </div>
                   <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-850 flex items-center justify-between">
                     <span className="text-[11px] text-slate-400">Pares Sincronizados:</span>
-                    <span className="text-[11px] font-bold text-slate-300">EURUSD, GBPUSD</span>
+                    <span className="text-[11px] font-bold text-slate-300">EUR, GBP, ORO</span>
+                  </div>
+                  
+                  {/* PWA / Screen tip to hide browser white bar */}
+                  <div className="bg-indigo-950/25 p-3 rounded-xl border border-indigo-500/20 flex flex-col gap-1.5 text-left">
+                    <span className="text-[9px] font-black text-indigo-400 uppercase tracking-widest flex items-center gap-1">
+                      📱 OCULTAR BARRA DEL NAVEGADOR
+                    </span>
+                    <p className="text-[10px] text-slate-400 leading-normal">
+                      Para remover la barra blanca de internet y ver la app en pantalla completa nativa:
+                    </p>
+                    <div className="text-[9px] text-slate-400 leading-normal flex flex-col gap-1 pl-1">
+                      <p>• <b>Android (Chrome):</b> Pulsa los tres puntos <b className="text-slate-200">⋮</b> arriba a la derecha y elige <b>"Instalar aplicación"</b> o <b>"Agregar a la pantalla de inicio"</b>.</p>
+                      <p>• <b>iPhone (Safari):</b> Pulsa el botón de <b>Compartir</b> (flecha hacia arriba) y selecciona <b>"Agregar a pantalla de inicio"</b>.</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-2 text-center text-[9px] text-slate-500">
+                <div className="mt-1 text-center text-[9px] text-slate-500">
                   SMC Inducement Mentor v1.4.0 • Desarrollado con Inteligencia Artificial
                 </div>
               </motion.div>
