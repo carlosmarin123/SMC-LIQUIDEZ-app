@@ -77,14 +77,14 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Mock Smartphone Container */}
-      <div className="w-full h-screen md:h-[820px] md:max-w-[395px] bg-[#131722]/95 border-0 md:border-[10px] md:border-[#2c303d] rounded-none md:rounded-[48px] shadow-2xl relative flex flex-col overflow-hidden text-slate-300 select-none">
+      <div className="w-full h-[100dvh] md:h-[820px] md:max-w-[395px] bg-[#131722]/95 border-0 md:border-[10px] md:border-[#2c303d] rounded-none md:rounded-[48px] shadow-2xl relative flex flex-col overflow-hidden text-slate-300 select-none">
         {/* Notch / Speaker bar of mobile */}
-        <div className="hidden md:flex absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#2c303d] rounded-b-2xl z-40 items-center justify-center">
+        <div className="flex absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#2c303d] rounded-b-2xl z-40 items-center justify-center">
           <div className="w-12 h-1.5 bg-slate-950 rounded-full mb-1" />
         </div>
 
         {/* Dynamic Mobile Status Bar */}
-        <div className="hidden md:flex h-10 px-6 pt-2.5 items-center justify-between text-slate-400 font-medium text-[11px] z-30 shrink-0">
+        <div className="flex h-10 px-6 pt-2.5 items-center justify-between text-slate-400 font-medium text-[11px] z-30 shrink-0">
           <span className="font-semibold text-slate-200">{currentTime}</span>
           <div className="flex items-center gap-1.5">
             <Signal className="w-3.5 h-3.5" />
@@ -97,7 +97,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
         </div>
 
         {/* App Shell Custom Header */}
-        <div className="px-5 pt-8 pb-3 md:py-3 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between z-20 shrink-0">
+        <div className="px-5 py-3 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between z-20 shrink-0">
           {/* User profile avatar info */}
           <button 
             onClick={() => setShowProfileModal(true)}
@@ -153,8 +153,8 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
               className="absolute top-0 right-0 w-full h-full bg-[#131722]/98 z-50 flex flex-col shadow-2xl border-l border-slate-800"
             >
-              <div className="hidden md:block h-10 shrink-0" /> {/* Spacer for notch */}
-              <div className="px-5 pt-8 pb-4 md:py-4 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between shrink-0">
+              <div className="h-10 shrink-0" /> {/* Spacer for notch */}
+              <div className="px-5 py-4 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-2">
                   <Bell className="w-5 h-5 text-indigo-400" />
                   <h3 className="text-sm font-black text-slate-200 uppercase tracking-wider">Centro de Señales</h3>
@@ -298,11 +298,11 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
         </AnimatePresence>
 
         {/* Dynamic Navigation Bar at Bottom */}
-        <div className="h-[68px] bg-[#161a25] border-t border-slate-850 flex items-center justify-around px-2 shrink-0 z-30 pb-2">
+        <div className="h-[58px] md:h-[68px] bg-[#161a25] border-t border-slate-850 flex items-center justify-around px-2 shrink-0 z-30 pb-0.5 md:pb-2">
           {/* PDF Tutor Tab (Primary / First) */}
           <button
             onClick={() => setActiveTab("pdf-tutor")}
-            className={`flex flex-col items-center gap-1.5 py-1.5 px-3 rounded-xl transition-all duration-300 ${
+            className={`flex flex-col items-center gap-1 md:gap-1.5 py-1 md:py-1.5 px-2.5 md:px-3 rounded-xl transition-all duration-300 ${
               activeTab === "pdf-tutor"
                 ? "text-indigo-400 scale-105"
                 : "text-slate-500 hover:text-slate-300"
@@ -315,7 +315,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
           {/* Quiz SMC Tab (Second) */}
           <button
             onClick={() => setActiveTab("quiz")}
-            className={`flex flex-col items-center gap-1.5 py-1.5 px-3 rounded-xl transition-all duration-300 ${
+            className={`flex flex-col items-center gap-1 md:gap-1.5 py-1 md:py-1.5 px-2.5 md:px-3 rounded-xl transition-all duration-300 ${
               activeTab === "quiz"
                 ? "text-indigo-400 scale-105"
                 : "text-slate-500 hover:text-slate-300"
@@ -328,7 +328,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
           {/* Video Coach Tab (Third) */}
           <button
             onClick={() => setActiveTab("video-coach")}
-            className={`flex flex-col items-center gap-1.5 py-1.5 px-3 rounded-xl transition-all duration-300 ${
+            className={`flex flex-col items-center gap-1 md:gap-1.5 py-1 md:py-1.5 px-2.5 md:px-3 rounded-xl transition-all duration-300 ${
               activeTab === "video-coach"
                 ? "text-indigo-400 scale-105"
                 : "text-slate-500 hover:text-slate-300"
@@ -341,7 +341,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
           {/* TradingView Tab (Fourth) */}
           <button
             onClick={() => setActiveTab("tradingview")}
-            className={`flex flex-col items-center gap-1.5 py-1.5 px-3 rounded-xl transition-all duration-300 ${
+            className={`flex flex-col items-center gap-1 md:gap-1.5 py-1 md:py-1.5 px-2.5 md:px-3 rounded-xl transition-all duration-300 ${
               activeTab === "tradingview"
                 ? "text-indigo-400 scale-105"
                 : "text-slate-500 hover:text-slate-300"
