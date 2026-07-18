@@ -244,7 +244,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ showToast, onRefreshStats })
   };
 
   return (
-    <div className="flex flex-col gap-4 pb-6">
+    <div className="flex flex-col gap-4 pb-1 md:pb-6">
       {/* Welcome & Stats Banner */}
       <div className="bg-gradient-to-br from-slate-900 via-[#161a25] to-indigo-950 p-4 rounded-3xl border border-indigo-500/15 shadow-lg relative overflow-hidden">
         <div className="absolute right-0 top-0 w-24 h-24 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none" />

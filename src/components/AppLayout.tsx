@@ -71,7 +71,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
   };
 
   return (
-    <div className="min-h-screen md:py-6 md:px-4 flex items-center justify-center bg-[#0d0f14] font-sans relative overflow-hidden">
+    <div className="min-h-screen md:py-6 md:px-4 flex items-start md:items-center justify-center bg-[#0d0f14] font-sans relative overflow-hidden">
       {/* Immersive background glow effects */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
@@ -139,7 +139,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
         </div>
 
         {/* Main Interactive Screen Content Wrapper */}
-        <div className="flex-1 overflow-y-auto px-5 py-4 scrollbar-none relative">
+        <div className="flex-1 overflow-y-auto px-5 pt-3 pb-1 md:py-4 scrollbar-none relative">
           {children}
         </div>
 

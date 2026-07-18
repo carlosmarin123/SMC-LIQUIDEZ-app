@@ -122,7 +122,7 @@ export const TradingViewView: React.FC<TradingViewViewProps> = ({ showToast }) =
     : tradingviewIdeas.filter(idea => idea.category === activeIdeaCategory);
 
   return (
-    <div className="flex flex-col gap-4 pb-6">
+    <div className="flex flex-col gap-4 pb-1 md:pb-6">
       
       {/* Header Info */}
       <div className="bg-gradient-to-r from-[#17223b] to-[#161a25] p-4 rounded-3xl border border-blue-500/15 shadow-md flex justify-between items-center">

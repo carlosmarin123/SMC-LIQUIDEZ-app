@@ -160,7 +160,7 @@ export const PdfTutorView: React.FC<PdfTutorViewProps> = ({ showToast }) => {
   ];
 
   return (
-    <div className="flex flex-col gap-4 h-full pb-4">
+    <div className="flex flex-col gap-4 h-full pb-1 md:pb-4">
       
       {/* Guides Section */}
       <div className="flex flex-col gap-2.5">

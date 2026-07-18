@@ -84,7 +84,7 @@ export const VideoCoachView: React.FC<VideoCoachViewProps> = ({ showToast }) => 
   };
 
   return (
-    <div className="flex flex-col gap-4 pb-6">
+    <div className="flex flex-col gap-4 pb-1 md:pb-6">
       
       {/* Category selector */}
       <div className="bg-slate-900/60 p-2.5 rounded-2xl border border-slate-800 flex justify-between items-center">
