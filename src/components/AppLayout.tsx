@@ -97,7 +97,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
         </div>
 
         {/* App Shell Custom Header */}
-        <div className="px-5 py-3 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between z-20 shrink-0">
+        <div className="px-5 pt-8 pb-3 md:py-3 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between z-20 shrink-0">
           {/* User profile avatar info */}
           <button 
             onClick={() => setShowProfileModal(true)}
@@ -154,7 +154,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
               className="absolute top-0 right-0 w-full h-full bg-[#131722]/98 z-50 flex flex-col shadow-2xl border-l border-slate-800"
             >
               <div className="hidden md:block h-10 shrink-0" /> {/* Spacer for notch */}
-              <div className="px-5 py-4 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between shrink-0">
+              <div className="px-5 pt-8 pb-4 md:py-4 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-2">
                   <Bell className="w-5 h-5 text-indigo-400" />
                   <h3 className="text-sm font-black text-slate-200 uppercase tracking-wider">Centro de Señales</h3>
