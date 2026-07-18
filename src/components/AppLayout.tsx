@@ -71,20 +71,20 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-[#0d0f14] py-6 px-4 flex items-center justify-center font-sans relative overflow-hidden">
+    <div className="min-h-screen md:py-6 md:px-4 flex items-center justify-center bg-[#0d0f14] font-sans relative overflow-hidden">
       {/* Immersive background glow effects */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Mock Smartphone Container */}
-      <div className="w-full max-w-[395px] h-[820px] bg-[#131722]/95 border-[10px] border-[#2c303d] rounded-[48px] shadow-2xl relative flex flex-col overflow-hidden text-slate-300 select-none">
+      <div className="w-full h-screen md:h-[820px] md:max-w-[395px] bg-[#131722]/95 border-0 md:border-[10px] md:border-[#2c303d] rounded-none md:rounded-[48px] shadow-2xl relative flex flex-col overflow-hidden text-slate-300 select-none">
         {/* Notch / Speaker bar of mobile */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#2c303d] rounded-b-2xl z-40 flex items-center justify-center">
+        <div className="hidden md:flex absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#2c303d] rounded-b-2xl z-40 items-center justify-center">
           <div className="w-12 h-1.5 bg-slate-950 rounded-full mb-1" />
         </div>
 
         {/* Dynamic Mobile Status Bar */}
-        <div className="h-10 px-6 pt-2.5 flex items-center justify-between text-slate-400 font-medium text-[11px] z-30 shrink-0">
+        <div className="hidden md:flex h-10 px-6 pt-2.5 items-center justify-between text-slate-400 font-medium text-[11px] z-30 shrink-0">
           <span className="font-semibold text-slate-200">{currentTime}</span>
           <div className="flex items-center gap-1.5">
             <Signal className="w-3.5 h-3.5" />
@@ -153,7 +153,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
               className="absolute top-0 right-0 w-full h-full bg-[#131722]/98 z-50 flex flex-col shadow-2xl border-l border-slate-800"
             >
-              <div className="h-10 shrink-0" /> {/* Spacer for notch */}
+              <div className="hidden md:block h-10 shrink-0" /> {/* Spacer for notch */}
               <div className="px-5 py-4 border-b border-slate-850 bg-[#161a25]/60 flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-2">
                   <Bell className="w-5 h-5 text-indigo-400" />
